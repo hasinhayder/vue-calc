@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sum It</title>
-    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/style.css?v2" />
     <link
-      href="//fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+      href="//fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -22,8 +22,9 @@
             v-on:keyup.enter="addItem"
             v-on:keydown.delete="undoAddition"
             ref="n"
-          /><br/>
-          <input type="checkbox" v-model="del"><span>Activate Backspace/Delete Key to Undo additions</span> 
+          /><br />
+          <input type="checkbox" v-model="del" />
+          <span>Activate Backspace/Delete Key to Undo additions</span>
         </div>
         <div @click="focus">
           <ul class="items">
@@ -50,12 +51,14 @@
             * Click on <kbd class="light">Delete</kbd> button to remove any
             specific item<br />
             * Check source code and send issues/sugegstions -
-            <a href="https://github.com/hasinhayder/vue-calc" target="_blank">Sum It</a><br />
+            <a href="https://github.com/hasinhayder/vue-calc" target="_blank"
+              >Sum It</a
+            ><br />
           </p>
         </div>
       </div>
     </section>
     <script src="//cdnjs.cloudflare.com/ajax/libs/vue/3.0.0-rc.10/vue.global.prod.js"></script>
-    <script src="assets/main.js?v2"></script>
+    <script src="assets/main.js?v3"></script>
   </body>
 </html>

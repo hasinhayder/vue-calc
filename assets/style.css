@@ -1,13 +1,14 @@
 body {
   display: grid;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 20px;
   font-family: "Noto Sans", sans-serif;
 }
 
 section.content {
   padding: 20px;
-  width: 800px;
+  max-width: 800px;
+  width: 100%;
   background-color: #ffffff;
 }
 
@@ -19,7 +20,7 @@ section.content {
 
 .form {
   background-color: #eee;
-  padding: 20px 20px 30px 20px;
+  padding: 20px 30px 30px 20px;
 }
 
 .form input[type="text"] {
@@ -36,9 +37,9 @@ section.content {
   display: block;
 }
 
-.form span{
-    font-size:15px;
-    margin-left:3px;
+.form span {
+  font-size: 15px;
+  margin-left: 3px;
 }
 
 ul.items {
@@ -138,6 +139,7 @@ kbd,
   -webkit-user-select: none;
   user-select: none;
 }
+
 kbd[title],
 .key[title] {
   cursor: help;
