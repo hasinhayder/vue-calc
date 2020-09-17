@@ -19,10 +19,11 @@
           <input
             type="text"
             v-model="item"
-            v-on:keyup.enter="addNumber"
-            v-on:keydown.delete="shiftNumber"
+            v-on:keyup.enter="addItem"
+            v-on:keydown.delete="undoAddition"
             ref="n"
-          />
+          /><br/>
+          <input type="checkbox" v-model="del"><span>Activate Backspace/Delete Key to Undo additions</span> 
         </div>
         <div>
           <ul class="items">
@@ -55,6 +56,6 @@
       </div>
     </section>
     <script src="//cdnjs.cloudflare.com/ajax/libs/vue/3.0.0-rc.10/vue.global.prod.js"></script>
-    <script src="assets/main.js"></script>
+    <script src="assets/main.js?v2"></script>
   </body>
 </html>

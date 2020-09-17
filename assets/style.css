@@ -26,6 +26,7 @@ section.content {
   height: 35px;
   width: 97%;
   margin-top: 10px;
+  margin-bottom: 10px;
   font-size: 24px;
   padding: 5px 10px;
 }
@@ -33,6 +34,11 @@ section.content {
 .form label {
   font-size: 20px;
   display: block;
+}
+
+.form span{
+    font-size:15px;
+    margin-left:3px;
 }
 
 ul.items {
