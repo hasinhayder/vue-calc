@@ -44,16 +44,6 @@ Vue.createApp({
       this.item = ''
       this.label = this.sum == 0 ? '' : 'Total = ' + this.sum
       this.$refs.n.focus()
-    },
-    itemUpdate(item, key) {
-      if (item == '') {
-        this.removeItem(key)
-      } else {
-        item = eval(item.replace(/[^-()\d/*+.]/g, ''));
-        this.items[key] = item;
-        this.updateTotal();
-      }
-      
     }
   }
 }).mount('#app')

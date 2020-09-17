@@ -28,9 +28,7 @@
         <div>
           <ul class="items">
             <li v-for="(item,index) in items">
-              <div class="left">
-                <input type="number" @keyup.enter="itemUpdate(item, index)" v-model="item">
-              </div>
+              <div class="left">{{item}}</div>
               <div class="right">
                 <button @click="removeItem(index)">Delete</button>
               </div>
