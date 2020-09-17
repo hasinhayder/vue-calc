@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sum It</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link
+      href="//fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <section class="content">
+      <div id="app">
+        <div class="form">
+          <label>{{label}}</label>
+          <input
+            type="text"
+            v-model="item"
+            v-on:keyup.enter="addNumber"
+            v-on:keyup.delete="shiftNumber"
+            ref="n"
+          />
+        </div>
+        <div>
+          <ul class="items">
+            <li v-for="(item,index) in items">
+              <div class="left">{{item}}</div>
+              <div class="right">
+                <button @click="removeItem(index)">Delete</button>
+              </div>
+            </li>
+            <!-- <li class="seperator"></li> -->
+            <li class="total" v-show="sum">
+              <div class="left">Total</div>
+              <div class="right">{{sum}}</div>
+            </li>
+          </ul>
+        </div>
+        <div class="info">
+          <p>
+            * Type a number and hit <kbd>Enter</kbd> to add it<br />
+            * Type a math expression like 16 * 4 or 56 / 7 and hit
+            <kbd>Enter</kbd> to add the result<br />
+            * Hit <kbd>Delete</kbd> / <kbd>Backspace</kbd> key to undo the
+            addition<br />
+            * Click on <kbd class="light">Delete</kbd> button to remove any
+            specific item<br />
+            * Check source code and send issues/sugegstions -
+            <a href="" target="_blank">Sum It</a><br />
+          </p>
+        </div>
+      </div>
+    </section>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/vue/3.0.0-rc.10/vue.global.prod.js"></script>
+    <script src="assets/main.js"></script>
+  </body>
+</html>
