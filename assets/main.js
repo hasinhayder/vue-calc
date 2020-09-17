@@ -25,7 +25,7 @@ Vue.createApp({
   methods: {
     addItem () {
       this.item = eval(this.item.replace(/[^-()\d/*+.]/g, '')) //parse the math expression, but sanitize it
-      if (this.item > 0) {
+      if (!isNaN(this.item) && this.item!=0) {
         this.items.unshift(this.item * 1) //or push - whatever works for you
       }
       this.item = ''
