@@ -1,12 +1,12 @@
 body {
   display: grid;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 40px;
   font-family: "Noto Sans", sans-serif;
 }
 
 section.content {
-  padding: 20px;
+  /* padding: 20px; */
   max-width: 800px;
   width: 100%;
   background-color: #ffffff;
