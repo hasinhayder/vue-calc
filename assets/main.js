@@ -9,7 +9,6 @@ Vue.createApp({
   },
   watch: {
     del (value) {
-      console.log(value)
       localStorage.delActive = value
     }
   },
