@@ -4,7 +4,8 @@ Vue.createApp({
       del: localStorage.delActive ? localStorage.delActive : false,
       label: '',
       item: '',
-      items: []
+      items: [],
+      histories: []
     }
   },
   watch: {
@@ -24,14 +25,17 @@ Vue.createApp({
   },
   methods: {
     addItem () {
-      this.item = eval(this.item.replace(/[^-()\d/*+.]/g, '')) //parse the math expression, but sanitize it
+      let item = this.item.replace(/[^-()\d/*+.]/g, '') //parse the math expression, but sanitize it
+      this.item = eval(item)
       if (this.item > 0) {
         this.items.unshift(this.item * 1) //or push - whatever works for you
+        this.histories.unshift(item)
       }
       this.updateTotal()
     },
     removeItem (n) {
       this.items.splice(n, 1)
+      this.histories.splice(n, 1)
       this.updateTotal()
     },
     undoAddition () {

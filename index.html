@@ -27,14 +27,15 @@
         </div>
         <div>
           <ul class="items">
-            <li v-for="(item,index) in items">
+            <li v-for="(item,index) in items" class="grid-col-3">
               <div class="left">{{item}}</div>
+              <div>{{ histories[index] }}</div>
               <div class="right">
                 <button @click="removeItem(index)">Delete</button>
               </div>
             </li>
             <!-- <li class="seperator"></li> -->
-            <li class="total" v-show="sum">
+            <li class="total grid-col-2" v-show="sum">
               <div class="left">Total</div>
               <div class="right">{{sum}}</div>
             </li>
