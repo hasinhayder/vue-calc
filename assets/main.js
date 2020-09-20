@@ -20,7 +20,8 @@ Vue.createApp({
     }
   },
   mounted () {
-    this.focus()
+    this.focus();
+    document.getElementById("loader").style.display="none";
   },
   methods: {
     addItem () {

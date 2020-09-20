@@ -9,9 +9,24 @@
       href="//fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
       rel="stylesheet"
     />
+    <style>
+        .loader{
+            position: absolute;
+            top:0px;
+            left:0px;
+            width:100vw;
+            height: 100vh;
+            z-index: 1000;
+            display: grid;
+            justify-items: center;
+            align-content: center;
+            background-color: #fff;
+        }
+    </style>
   </head>
 
   <body>
+    <section id="loader" class='loader' >loading . . . </section>
     <section class="content">
       <div id="app">
         <div class="form">
@@ -26,7 +41,7 @@
           <input type="checkbox" v-model="del" />
           <span>Activate Backspace/Delete Key to Undo additions</span>
         </div>
-        <div @click="focus">
+        <div>
           <ul class="items">
             <li v-for="(item,index) in items">
               <div class="left">{{item}}</div>
@@ -41,7 +56,7 @@
             </li>
           </ul>
         </div>
-        <div class="info" @click="focus">
+        <div class="info">
           <p>
             * Type a number and hit <kbd>Enter</kbd> to add it<br />
             * Type a math expression like 16 * 4 or 56 / 7 and hit
@@ -56,7 +71,7 @@
         </div>
       </div>
     </section>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/vue/3.0.0-rc.10/vue.global.prod.js"></script>
+    <script src="//unpkg.com/vue@next"></script>
     <script src="assets/main.js?v4"></script>
   </body>
 </html>
